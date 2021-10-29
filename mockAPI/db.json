@@ -1,0 +1,69 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Testing1",
+      "password": "abc123",
+      "createdAt": "October 29, 2021 10:36:00",
+      "watching": [
+        {
+          "seriesId": null,
+          "currentPage": 0,
+          "seriesRating": null,
+          "status": "Future Read"
+        }
+      ]
+    }
+  ],
+  "series": [
+    {
+      "id": null,
+      "title": "",
+      "serieswiki": "",
+      "seriesImg": "",
+      "releaseSchedule": {
+        "frequency": "",
+        "dayOfWeek": null,
+        "haitusTill": null
+      },
+      "author": {
+        "id": 1,
+        "firstname": "",
+        "lastname": "",
+        "wikilink": "",
+        "headshotUrl": ""
+      },
+      "ongoing": false,
+      "publishedDate": "",
+      "characters": [],
+      "chapters": [
+        {
+          "id": 1,
+          "releaseDate": "",
+          "releaseName": "Chapter 01",
+          "plotSummary": "",
+          "mentions": {
+            "characters": [
+              {
+                "characterID": null,
+                "chSummary": "",
+                "plotCategory": "minor",
+                "identityKnown": true
+              }
+            ],
+            "places": [],
+            "concepts": []
+          },
+          "comments": [
+            {
+              "id": 1,
+              "userId": 1,
+              "postedAt": "date+time",
+              "postBody": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
