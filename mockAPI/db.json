@@ -7,7 +7,7 @@
       "createdAt": "October 29, 2021 10:36:00",
       "watching": [
         {
-          "seriesId": null,
+          "seriesId": 1,
           "currentPage": 0,
           "seriesRating": null,
           "status": "Future Read"
@@ -17,7 +17,7 @@
   ],
   "series": [
     {
-      "id": null,
+      "id": 1,
       "title": "",
       "serieswiki": "",
       "seriesImg": "",
@@ -45,7 +45,7 @@
           "mentions": {
             "characters": [
               {
-                "characterID": null,
+                "characterID": 1,
                 "chSummary": "",
                 "plotCategory": "minor",
                 "identityKnown": true
