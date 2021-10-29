@@ -1,10 +1,10 @@
-import React from "react"
-import "./App.css"
+import './App.css'
+import NewUserForm from './temp_components/NewUserForm'
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header" />
+    <div className='App'>
+      <NewUserForm />
     </div>
   )
 }
