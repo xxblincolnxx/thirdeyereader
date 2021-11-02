@@ -41,7 +41,7 @@ const NewUserForm = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
       </label>
-      <button type='submit' value='Submit'>
+      <button className='btn-green' type='submit' value='Submit'>
         Submit
       </button>
     </form>
