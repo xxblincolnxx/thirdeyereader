@@ -2,7 +2,7 @@ import { useState } from 'react'
 import axios from 'axios'
 
 axios.defaults.baseURL = 'http://localhost:5000'
-
+// CONVERT TO  React Hook Form
 const NewSeriesForm = () => {
   const [title, setTitle] = useState('none')
   const [seriesWiki, setSeriesWiki] = useState('none')

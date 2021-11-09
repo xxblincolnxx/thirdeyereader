@@ -1,11 +1,14 @@
-import './App.css'
 import NewUserForm from './temp_components/NewUserForm'
-import NewSeriesForm from './temp_components/NewSeriesForm'
+import NewSeriesHookForm from './temp_components/NewSeriesHookForm'
+import LoginPage from './components/LoginPage'
 import { useState } from 'react'
+import { LoginContext } from './contexts/LoginContext'
 import './index.css'
 
-function App () {
+function App() {
   const [form, setForm] = useState('user')
+  const [authed, setAuthed] = useState(false)
+  const [username, setUsername] = useState('')
 
   const toggleForm = () => {
     if (form === 'user') {
@@ -14,15 +17,31 @@ function App () {
       setForm('user')
     }
   }
+
   return (
     <div className='App'>
-      <div className='center-50'>
-        <button className='btn-black' onClick={toggleForm}>
-          {form === 'user' ? 'Go to Series' : 'Go to User'}
-        </button>
-        {form === 'user' && <NewUserForm />}
-        {form === 'series' && <NewSeriesForm />}
-      </div>
+      <p>{username}</p>
+      <LoginContext.Provider
+        value={{ authed, setAuthed, username, setUsername }}
+      >
+        <LoginPage />
+        <div className='center-50'>
+          <button className='btn-black' onClick={toggleForm}>
+            {form === 'user' ? 'Go to Series' : 'Go to User'}
+          </button>
+          {form === 'user' && <NewUserForm />}
+          {form === 'series' && <NewSeriesHookForm />}
+        </div>
+      </LoginContext.Provider>
+      <button
+        className='btn-black'
+        onClick={() => {
+          setAuthed(false)
+          setUsername('')
+        }}
+      >
+        Log Out
+      </button>
     </div>
   )
 }
